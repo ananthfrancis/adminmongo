@@ -2,7 +2,7 @@ FROM node:latest
 RUN mkdir /opt/app-root
 COPY . /opt/app-root
 WORKDIR /opt/app-root
-RUN npm install
+RUN npm install -ddd
 RUN chgrp -R 0 /opt/app-root
 RUN chmod -R g=u /opt/app-root /etc/passwd
 RUN chmod -R 777 /opt/app-root /etc/passwd
